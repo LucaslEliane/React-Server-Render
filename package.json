@@ -1,0 +1,19 @@
+{
+  "name": "react-server-render",
+  "version": "1.0.0",
+  "description": "A Demo for Server-Render with Koa2, React, Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucaslEliane/React-Server-Render.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucaslEliane/React-Server-Render/issues"
+  },
+  "homepage": "https://github.com/LucaslEliane/React-Server-Render#readme"
+}
