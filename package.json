@@ -15,5 +15,37 @@
   "bugs": {
     "url": "https://github.com/LucaslEliane/React-Server-Render/issues"
   },
-  "homepage": "https://github.com/LucaslEliane/React-Server-Render#readme"
+  "homepage": "https://github.com/LucaslEliane/React-Server-Render#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.28.0",
+    "koa": "^2.0.0-alpha.8",
+    "koa-convert": "^1.2.0",
+    "koa-webpack-dev-middleware": "^1.4.5",
+    "koa-webpack-hot-middleware": "^1.0.3",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-register": "^6.24.0",
+    "ejs": "^2.5.6",
+    "koa-router": "^7.1.1",
+    "koa-views": "^6.0.1",
+    "normalize.css": "^6.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui": "^2.2.10"
+  }
 }

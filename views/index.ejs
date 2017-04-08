@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <title>百度新闻</title>
+  </head>
+  <body>
+    <div id="root"><%- root %></div>
+    <script>
+      window.REDUX_STATE = <%- JSON.stringify(state) %>
+    </script>
+    <script src="/vendor.js"></script>
+    <script src="/bundle.js"></script>
+  </body>
+</html>
