@@ -4,6 +4,22 @@ require('babel-register')({
   presets: ['env', 'react']
 })
 
+require('css-modules-require-hook')({
+  extensions: ['.less'],
+  camelCase: true,
+      preprocessCss: function(css, filename) {
+        var _result;
+        require('less').render(css, {syncImport: true, filename: filename}, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            _result = result.css;
+        });
+        return _result;
+    },
+  generateScopedName: '[local]'
+})
+
 const Koa = require('koa')
   , app = new Koa()
   , views = require('koa-views')
@@ -18,20 +34,6 @@ const Koa = require('koa')
   , webpackHotMiddleware = require('koa-webpack-hot-middleware')
   , fs = require('fs')
 
-
-// compiler.plugin('emit', (compilation, callback) => {
-//     const assets = compilation.assets
-//     let file, data
-
-//     Object.keys(assets).forEach(key => {
-//         if (key.match(/\.html$/)) {
-//             file = path.resolve(__dirname, key)
-//             data = assets[key].source()
-//             fs.writeFileSync(file, data)
-//         }
-//     })
-//     callback()
-// })
 
 app.use(convert(webpackDevMiddleware(compiler, {
   noInfo: true,

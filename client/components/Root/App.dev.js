@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router'
+import { Route, Switch } from 'react-router'
 import Index from '../Index/Index.js'
 import Explore from '../Explore/Explore.js'
+import Header from '../common/Header.js'
 
 class Root extends Component {
   constructor() {
@@ -10,8 +11,11 @@ class Root extends Component {
   render() {
     return (
       <div>
-        <Route path="/" component={Index}/>
-        <Route path="/Explore" component={Explore}/>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Index}/>
+          <Route path="/Explore" component={Explore}/>
+        </Switch>
       </div>
     )
   }

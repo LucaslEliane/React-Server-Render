@@ -7,10 +7,16 @@ class Index extends Component {
   }
   render() {
     return (
-      <div>
-        <p>
-          This is Root!
-        </p>
+      <div className="ui four column grid">
+        <div className="row">
+          <div className="column"></div>
+          <div className="column"></div>
+          <div className="column"></div>
+        </div>
+        <div className="column"></div>
+        <div className="column"></div>
+        <div className="column"></div>
+        <div className="column"></div>
       </div>
     )
   }

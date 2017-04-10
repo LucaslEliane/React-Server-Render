@@ -29,7 +29,7 @@ module.exports = {
         use: [{
           loader: "style-loader"
         }, {
-          loader: "css-loader"
+          loader: "css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]"
         }, {
           loader: "less-loader"
         }]
@@ -38,7 +38,7 @@ module.exports = {
         use: [{
           loader: "style-loader"
         }, {
-          loader: "css-loader"
+          loader: "css-loader?modules&camelCase&importLoaders=1&localIdentName=[local]"
         }]
       }, {
         test: /\.js$/,

@@ -1,0 +1,14 @@
+{
+  "recommend": {
+    "user1": {
+      "partition": [
+        {
+          "name": "小说",
+          "avatar": "http://adasda.com/sadad"
+        }, {
+          
+        }
+      ]
+    }
+  }
+}
