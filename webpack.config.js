@@ -1,6 +1,8 @@
 const webpack = require('webpack')
   , path = require('path')
 
+process.noDeprecation = true
+
 module.exports = {
   entry: {
     vendor: [
@@ -15,7 +17,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, 'dist/client'),
-    chunkFilename: '[name].[hash].js',
+    chunkFilename: '[name].js',
     publicPath: '/'
   },
   devtool: "source-map",
@@ -40,19 +42,25 @@ module.exports = {
         }]
       }, {
         test: /\.js$/,
-        use: {
+        use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
+            presets: ['env', 'react', 'es2015', 'stage-0']
           }
-        }
+        }]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.less', '.css']
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor",
       minChunks: Infinity
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
 }

@@ -32,6 +32,7 @@ const Koa = require('koa')
 //     })
 //     callback()
 // })
+
 app.use(convert(webpackDevMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath

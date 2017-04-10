@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router'
 
-class Index extends Component {
+class Explore extends Component {
   constructor() {
     super()
   }
@@ -9,11 +9,11 @@ class Index extends Component {
     return (
       <div>
         <p>
-          This is Root!
+          This is Explore!
         </p>
       </div>
     )
   }
 }
 
-export default Index
+export default Explore

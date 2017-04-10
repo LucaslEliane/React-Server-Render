@@ -21,7 +21,8 @@ async function clientRoute (ctx, next) {
         </StaticRouter>
       </Provider>
     ),
-    state: store.getState()
+    state: store.getState(),
+    title: "首页-难书"
   })
 }
 
