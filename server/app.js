@@ -1,7 +1,8 @@
 require('babel-polyfill')
 
 require('babel-register')({
-  presets: ['env', 'react']
+  presets: ['env', 'react'],
+  plugins: ['add-module-exports']
 })
 
 require('css-modules-require-hook')({

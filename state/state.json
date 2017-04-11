@@ -1,5 +1,15 @@
 {
   "recommend": {
+    "default": {
+      "partition": [
+        {
+          "name": "小说",
+          "avatar": "http://adasda.com/sadad"
+        }, {
+          
+        }
+      ]
+    },
     "user1": {
       "partition": [
         {

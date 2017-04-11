@@ -12,7 +12,10 @@ module.exports = {
       "react-redux",
       "react-router"
     ],
-    bundle: "./client"
+    bundle: [
+      './client',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
+    ]
   },
   output: {
     filename: "[name].js",
@@ -45,7 +48,9 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react', 'es2015', 'stage-0']
+            presets: ['env', 'react', 'es2015', 'stage-0', 'react-hmre'],
+            plugins: ['transform-runtime', 'add-module-exports'],
+            cacheDirectory: true
           }
         }]
       }
