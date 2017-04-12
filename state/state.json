@@ -1,15 +1,5 @@
 {
   "recommend": {
-    "default": {
-      "partition": [
-        {
-          "name": "小说",
-          "avatar": "http://adasda.com/sadad"
-        }, {
-          
-        }
-      ]
-    },
     "user1": {
       "partition": [
         {
@@ -18,7 +8,25 @@
         }, {
           
         }
+      ],
+      "passageID": [
+        "passage1", "passage2", "passage3"
       ]
     }
-  }
+  },
+  "passage": [
+    {
+      "passageID": "passage1",
+      "passageTitle": "title",
+      "passageAuthor": "author",
+      "passageTime": "10101010",
+      "passagePartition": "小说",
+      "passageView": "view",
+      "passageContent": "This is a new passage",
+      "passageComment": [
+        "comment1", "comment2", "comment3"
+      ],
+      "passageLike": 3
+    }
+  ]
 }

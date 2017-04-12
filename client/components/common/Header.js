@@ -4,8 +4,6 @@ import { NavLink, withRouter, Link } from 'react-router-dom'
 
 import styles from './Header.less'
 
-console.log(styles)
-
 class Header extends Component {
   constructor(props) {
     super(props)

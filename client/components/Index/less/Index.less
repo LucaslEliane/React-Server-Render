@@ -1,0 +1,132 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, 
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after { 
+  clear: both; 
+}
+
+.set-height-width (@height, @width) {
+  height: @height;
+  width: @width;
+}
+
+.main.content {
+  width: 80%;
+  margin: 40px 10% 0 10%;
+
+  .index.left {
+    float: left; 
+    width: 65%;
+    margin-right: 5%;
+
+    .ui.four.column.grid {
+      margin-bottom: 50px;
+
+      .partition {
+        height: 4rem;
+        width: 12rem;
+
+        .ui.image.label {
+          border: 1px solid #DCDCDC;
+          background-color: #F7F7F7;
+          font-size: 1rem;
+        }
+
+        &:last-child {
+          .ui.image.label {
+            border-radius: 0;
+            border: 0;
+            background-color: #FFFFFF;
+            color: #787878;
+            svg {
+              margin: 0;
+              height: 1.5rem;
+              width: 2rem;
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: -0.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .ui.one.column.centered.grid {
+
+      .column {
+        height: 20rem;
+
+        .author {
+          .set-height-width(2rem, 70%);
+          .avatar {
+            float: left;
+            img {
+              height: 2rem;
+            }
+          }
+
+          .name {
+            float: left;
+            font-size: 1.3rem;
+            a {
+              color: #000000;
+              &:active {
+                color: #787878;
+              }
+            }
+            * {
+              padding-left: 1rem;
+            }
+            span {
+              line-height: 2rem;
+            }
+          }
+        }
+
+        .title {
+          line-height: 4rem;
+          font-size: 3rem;
+          margin-left: -2rem;
+          .set-height-width(4rem, 70%);
+          color: #000000;
+          &:active {
+            color: #787878;
+          }
+        }
+
+        .abstract {
+          display: block;
+          .set-height-width(10rem, 70%);
+        }
+
+        .meta {
+         .set-height-width(4rem, 70%);
+         * {
+           display: inline;
+           vertical-align: middle;
+         }
+         .ui.basic.button {
+           font-size: 0.5rem;
+           color: #EA6F5A !important;
+           border: 1px solid #EA6F5A;
+           padding: 0.5rem;
+         }
+         a {
+           color: #787878;
+         }
+        }
+
+        .wrap-img {
+          float: right;
+          height: 20rem;
+        }
+      }
+    }
+  }
+}

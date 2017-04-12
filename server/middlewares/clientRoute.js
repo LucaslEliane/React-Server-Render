@@ -13,7 +13,7 @@ async function clientRoute (ctx, next) {
 
   await store.dispatch(fetchRecommend('default'))
 
-  await ctx.render('index.ejs', {
+  await ctx.render('index', {
     root: renderToString(
       <Provider store={store}>
         <StaticRouter

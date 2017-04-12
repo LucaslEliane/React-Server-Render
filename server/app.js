@@ -1,54 +1,18 @@
-require('babel-polyfill')
+import Koa from 'koa'
+import json from 'koa-json'
+import bodyParser from 'koa-bodyparser'
+import logger from 'koa-logger'
+import session from 'koa-session'
+import compress from 'koa-compress'
+import convert from 'koa-convert'
 
-require('babel-register')({
-  presets: ['env', 'react'],
-  plugins: ['add-module-exports']
-})
+const app = new Koa()
 
-require('css-modules-require-hook')({
-  extensions: ['.less'],
-  camelCase: true,
-      preprocessCss: function(css, filename) {
-        var _result;
-        require('less').render(css, {syncImport: true, filename: filename}, function(err, result) {
-            if (err) {
-                throw err;
-            }
-            _result = result.css;
-        });
-        return _result;
-    },
-  generateScopedName: '[local]'
-})
+app.keys = ['this is a fucking secret']
+app.use(convert(session(app)))
+app.use(compress())
+app.use(bodyParser())
+app.use(json())
+app.use(logger())
 
-const Koa = require('koa')
-  , app = new Koa()
-  , views = require('koa-views')
-  , router = require('./routes')
-  , clientRoute = require('./middleware/clientRoute.js')
-  , config = require('../webpack.config')
-  , webpack = require('webpack')
-  , compiler = webpack(config)
-  , path = require('path')
-  , convert = require('koa-convert')
-  , webpackDevMiddleware = require('koa-webpack-dev-middleware')
-  , webpackHotMiddleware = require('koa-webpack-hot-middleware')
-  , fs = require('fs')
-
-
-app.use(convert(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-})))
-app.use(convert(webpackHotMiddleware(compiler)))
-
-app.use(views(path.resolve(__dirname, "../views")), {
-  map: {
-    html: "ejs"
-  }
-})
-app.use(clientRoute)
-app.use(router.routes())
-app.use(router.allowedMethods())
-
-app.listen(3000)
+export default app

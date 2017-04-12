@@ -1,8 +1,8 @@
-const router = require('koa-router')()
+import Router from 'koa-router'
+import user from '../controllers/user'
 
-router.get('./users', async function(ctx, next) {
-  ctx.body = "My name is Lucas"
-  await next()
-})
+const router = new Router({prefix: '/user'})
 
-module.exports = router
+router.get('/getUserInfo', user.getUserInfo)
+
+export default router
