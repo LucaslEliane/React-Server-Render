@@ -10,7 +10,8 @@ export default function configureStore(preloadedState) {
     rootReducer,
     preloadedState,
     applyMiddleware(
-      promiseMiddleware
+      promiseMiddleware,
+      logger
     )
   )
 

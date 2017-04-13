@@ -59,10 +59,14 @@
       margin-top: 2rem;
       height: 13rem;
       background-color: #F7F7F7;
+      border: 1px solid #DCDCDC;
       span {
+        margin: 1rem 0 0 1rem;
         &:first-child {
           display: block;
           color: #E45E46;
+          font-size: 1.4rem;
+          line-height: 2rem;
         }
         &:last-child {
           display: block;
@@ -74,10 +78,24 @@
         height: 4rem;
         a {
           width: 25%;
+          margin-left: 5%;
+          margin-right: 0;
+          padding: 0.6rem 0.5rem;
+          font-size: 1rem;
           height: 3rem;
-          margin: 0;
+          svg {
+            font-size: 1.4rem;
+            margin-right: 0 !important;
+            margin-top: 0.3rem !important;
+          }
           &:nth-child(1) {
-
+            .white-opacity(#9B9B9B);
+          }
+          &:nth-child(2) {
+            .white-opacity(#8BC453);
+          }
+          &:nth-child(3) {
+            .white-opacity(#6DACF4);
           }
         }
       }
