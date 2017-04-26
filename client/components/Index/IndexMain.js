@@ -3,6 +3,7 @@ import { Route } from 'react-router'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import styles from './less/IndexMain.less'
+import dateConvert from '../../common/.internal/dateConvert'
 
 class IndexMain extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class IndexMain extends Component {
                 {value.author.authorName}
               </a>
               <span className="time">
-                {value.passageTime}
+                {dateConvert(value.passageTime)}
               </span>
             </div>
           </div>
@@ -96,7 +97,7 @@ class IndexMain extends Component {
 
     return (
       <div className="index left">
-        <div className="ui four column grid">
+        <div className="recommend-partition">
           {partitionArray}
         </div>
         <div className="ui one column centered grid">

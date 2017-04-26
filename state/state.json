@@ -1,5 +1,6 @@
 {
   "recommend": {
+    "passageFetching": true,
     "user1": {
       "partition": [
         {
