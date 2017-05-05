@@ -1,0 +1,115 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, 
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after { 
+  clear: both; 
+}
+.ui.secondary.pointing.menu.navHeader {
+  position: fixed;
+  top: 0;
+  padding-top: 4rem;
+  width: 100%;
+  height: 2rem;
+  z-index: 999;
+  background: #FFFFFF;
+}
+.ui.secondary.pointing.menu.navHeader .headerItem {
+  padding: 20px 30px;
+  font-size: 1.3rem;
+  &:first-child {
+    margin-left: 20%;
+  }
+  &.active:hover {
+    border-color: #EA6F5A;
+    color: #EA6F5A;
+  }
+  &:not(.active):hover {
+    background: rgba(190, 190, 190, 0.2);
+  }
+}
+.ui.secondary.pointing.menu.navHeader .loginItem {
+  margin: 0px 10px 10px 0px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  color: #EA6F5A;
+  border: 1px solid #EA6F5A;
+  &:hover {
+    color: #EA6F5A;
+    background: rgba(150,150,150,0.1);
+  }
+}
+.ui.secondary.pointing.menu.navHeader .registerItem {
+  margin: 0px 10px 10px 0px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  color: #979797;
+}
+.ui.secondary.pointing.menu.navHeader .active {
+  padding: 20px 30px;
+  font-size: 1.3rem;
+  color: #EA6F5A;
+  border-color: #EA6F5A;
+}
+
+.ui.secondary.pointing.menu.navHeader .userInfo {
+  cursor: pointer;
+  img {
+    border-radius: 1.5rem;
+  }
+  .icon {
+    font-size: 1.5rem;
+    color: #999999;
+  }
+  &:hover {
+    background: rgba(167, 167, 167, 0.3);
+  }
+}
+
+.ui.secondary.pointing.menu.navHeader .header.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear; /* Firefox 4 */
+  -webkit-transition: opacity 1s linear; /* Safari 和 Chrome */
+  -o-transition: opacity 1s linear; /* Opera */
+  width: 15rem;
+  position: fixed;
+  background: #FFFFFF;
+  top: 4.2rem;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.8);
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      cursor: pointer;
+      padding: 1.2rem 3rem;
+      font-size: 1.1rem;
+      a {
+        color: black;
+        svg {
+          color: #EA6F5A;
+          margin-right: 1rem;
+        }
+      }
+      &:hover {
+        background: #F5F5F5;
+      }
+    }
+  }
+  &.drop {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear; /* Firefox 4 */
+    -webkit-transition: opacity 1s linear; /* Safari 和 Chrome */
+    -o-transition: opacity 1s linear; /* Opera */
+  }
+}

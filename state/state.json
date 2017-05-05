@@ -29,5 +29,19 @@
       ],
       "passageLike": 3
     }
-  ]
+  ],
+  "showPassage": {
+    "currentPassage": "121212",
+    "previousPassage": "121211",
+    "nextPassage": "121213"
+  }
+}
+
+{
+  "recommend": {
+    xxx
+  },
+  "passage": {
+    
+  }
 }

@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router'
 import Index from '../Index/Index.js'
-import Explore from '../Explore/Explore.js'
+import Passage from '../Passage/Passage.js'
 import Header from '../common/Header.js'
+import SignIn from '../Sign/SignIn.js'
+
 
 class Root extends Component {
   constructor() {
@@ -10,13 +12,11 @@ class Root extends Component {
   }
   render() {
     return (
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Index}/>
-          <Route path="/Explore" component={Explore}/>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" render={() => (<div><Header/><Index/></div>)}/>
+        <Route exact path="/passage/:id" render={() => (<div><Header/><Passage/></div>)}/>
+        <Route exact path="/sign_in" component={SignIn}></Route>
+      </Switch>
     )
   }
 }

@@ -16,14 +16,13 @@ class Index extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.documentScroll)
   }
+  
   documentScroll(event) {
     const { dispatch } = this.props
     const documentElement = document.documentElement
-    console.log(documentElement.scrollTop)
     let offset = documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
     documentElement.scrollHeight == documentElement.clientHeight + offset 
       && dispatch(requestRecommendPassage()) && dispatch(fetchRecommendPassage('default'))
-  
   }
 
   render() {

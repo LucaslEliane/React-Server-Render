@@ -3,7 +3,7 @@ import { Route } from 'react-router'
 import { connect } from 'react-redux'
 import _ from 'lodash'
 import styles from './less/IndexMain.less'
-import dateConvert from '../../common/.internal/dateConvert'
+import _dateConvert from '../../common/.internal/_dateConvert'
 
 class IndexMain extends Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class IndexMain extends Component {
                 {value.author.authorName}
               </a>
               <span className="time">
-                {dateConvert(value.passageTime)}
+                {_dateConvert(value.passageTime)}
               </span>
             </div>
           </div>
