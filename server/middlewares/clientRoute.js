@@ -13,7 +13,7 @@ import {
 
 async function clientRoute (ctx, next) {
   let context = {},
-      urlRegExp = /^\/(passage|api)?\//,
+      urlRegExp = /^\/(passage|api|users)?\//,
       urlArr = ctx.url.match(urlRegExp),
       title
   switch ( urlArr ? urlArr[1] : "index") {
@@ -25,6 +25,9 @@ async function clientRoute (ctx, next) {
     case "passage":
       title = "难书-说出你的故事"
       await store.dispatch(fetchPassageById())
+      break;
+    case "users":
+      title = "你的故事"
       break;
     case "api":
       await next()

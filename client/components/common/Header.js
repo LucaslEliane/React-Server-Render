@@ -49,7 +49,7 @@ class Header extends Component {
                 <div className="header dropdown" ref="dropdown">
                   <ul>
                     <li>
-                      <Link to="javascript:void(0)">
+                      <Link to={`/users/${ userState.userID }`}>
                         <svg className="icon" aria-hidden="true">
                           <use xlinkHref="#icon-weibiaoti101"></use>
                         </svg>
