@@ -73,7 +73,7 @@ class Header extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link to="javascript:void(0)">
+                      <Link to="/settings/">
                         <svg className="icon" aria-hidden="true">
                           <use xlinkHref="#icon-set"></use>
                         </svg>

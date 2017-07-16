@@ -1,0 +1,30 @@
+.setting-content {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  & > div {
+    float: left;
+  }
+  & > ul {
+    float: left;
+    list-style: none;
+    width: 30%;
+
+    li {
+      height: 40px;
+      &:hover {
+        background: rgba(50, 50, 50, 0.2);
+      }
+      a {
+        display: block;
+        height: 35px;
+        padding: 10px 0 10px 20px;
+        color: black;
+        &.active {
+          background: rgba(50, 50, 50, 0.2);
+        }
+      }
+    }
+  }
+}
